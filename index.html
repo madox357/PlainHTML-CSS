@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -36,6 +39,12 @@
 
             <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
         </section>
+    </div>
+
+    <div class="weather-container">
+        <img class="icon">
+            <p class="weather"></p>
+            <p class="temp"></p>
     </div>
 
     <div class="blue-container">
@@ -105,6 +114,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+    </script>
+    
 
 </body>
 </html>
